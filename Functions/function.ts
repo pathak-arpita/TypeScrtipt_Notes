@@ -1,10 +1,26 @@
 // Normal Function ------------------------->
 
+
+// 1). 
 function sum(a:number,b:number):number{
     return a+b;
 }
 
 console.log("The SUM is -----------> " +sum(5,7));
+
+// 2).
+function func_1(num: number): number {
+    if (num == 0) {
+        return -1;
+    }
+
+    for (let i = 0; i < num; i++) {
+        console.log(i + ",");
+    }
+    return 0;
+}
+
+console.log("ans of func_1", func_1(5));
 
 
 // Arrow Function ------------------------->
@@ -26,6 +42,13 @@ function divisibleBy4and8 (num : number):boolean{
 }
 
 console.log("NUMBER is divisible by 4 and 8  -----------> " + divisibleBy4and8 (8));
+
+//By using IIFE ----->
+const func = (function divisibleBy4and8(x: number): boolean {
+    return x % 4 === 0 && x % 8 === 0;
+})(10)
+
+console.log("ans of func", func);
 
 
 // ! Que.) Fetch the Data --------------------------->

@@ -1,4 +1,4 @@
-//! type Alias --------> is represented by " type " key word.
+//& type Alias --------> is represented by " type " key word.
 
 type Person = {
     height : number;

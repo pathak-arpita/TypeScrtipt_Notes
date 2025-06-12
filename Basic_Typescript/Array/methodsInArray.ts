@@ -19,7 +19,7 @@ console.log("Array after pop operation:", array_1);
 
 // --------------------------------------------------------------------------------------- //
 
-//~ For loops -------------->
+//~ FOR LOOPS -------------->
 
 
 //^  1. Normal for loop :
@@ -42,3 +42,35 @@ array_1.forEach((item, index) => {
     console.log("Element using forEach loop at index", index, "is:", item);
 }
 );
+
+// --------------------------------------------------------------------------------------- //
+
+//~ MAP METHOD ---------------> map method will return a new array and it does not modify the original array.
+
+const map_arr: number[] = [1, 2, 3, 4, 5];
+
+const map_Array: number[] = array_1.map(((index, item) => {
+    return item * item;
+}))
+
+console.log("Mapped array:", map_Array);
+console.log("Original array after map operation:", map_arr);
+
+// --------------------------------------------------------------------------------------- //
+
+//~ FILTER METHOD ---------------> filter method will return a new array and it does not modify the original array.
+const filter_arr: number[] = [1, 2, 3, 4, 5];
+
+const map_Array_2 = filter_arr.map((item, index) => {
+    return item > 2;
+});
+console.log("Mapped array with filter condition:", map_Array_2);
+
+const filter_Array: number[] = filter_arr.filter((item, index) => {
+    return item > 2;
+}
+);
+console.log("Filtered array:", filter_Array);
+console.log("Original array after filter operation:", filter_arr);
+
+//&  NOTE ------------->   Limitation of MAP method is it wont filter the elements, it will just map the elements to a new array based on the condition provided.

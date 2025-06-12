@@ -1,4 +1,24 @@
-// Normal Function ------------------------->
+/*
+&    functions are reusable blocks of code that perform a specific task.
+&    we can writ functions in two ways ------------->
+&             1). Normal Function
+&             2). Arrow Function
+
+^    Syntax of Function ------------------------->
+
+       function func(param1: type, param2: type): returnType {
+              function body
+       }
+     
+       func(arg1, arg2);
+       
+^       OR
+
+       const func = function (param1: type, param2: type): returnType {
+              function body
+       }
+       func(arg1, arg2);
+*/
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -9,8 +29,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g = Object.create((typeof Iterator === "function" ? Iterator : Object).prototype);
+    return g.next = verb(0), g["throw"] = verb(1), g["return"] = verb(2), typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
@@ -35,11 +55,25 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+// -------------------------------------------------------------------------------------------------- //
+//~ Normal Function ------------------------->
+// 1). 
 function sum(a, b) {
     return a + b;
 }
 console.log("The SUM is -----------> " + sum(5, 7));
-// Arrow Function ------------------------->
+// 2).
+function func_1(num) {
+    if (num == 0) {
+        return -1;
+    }
+    for (var i = 0; i < num; i++) {
+        console.log(i + ",");
+    }
+    return 0;
+}
+console.log("ans of func_1", func_1(5));
+//~ Arrow Function ------------------------->
 var multiply = function (x, y) {
     return x * y;
 };
@@ -50,6 +84,11 @@ function divisibleBy4and8(num) {
     return (num % 4 === 0 && num % 8 === 0);
 }
 console.log("NUMBER is divisible by 4 and 8  -----------> " + divisibleBy4and8(8));
+//By using IIFE ----->
+var func = (function divisibleBy4and8(x) {
+    return x % 4 === 0 && x % 8 === 0;
+})(10);
+console.log("ans of func", func);
 // ! Que.) Fetch the Data --------------------------->
 function fetchData() {
     return __awaiter(this, void 0, void 0, function () {
@@ -89,11 +128,11 @@ function processData() {
 }
 processData();
 //! Que.) Check Palindrome -------------------------->
-function isPaliendrome(palin) {
-    var split = palin.split("");
+function isPaliendrome(str) {
+    var split = str.split("");
     var reverse = split.reverse();
     var joint = reverse.join("");
-    return palin === joint;
+    return str === joint;
 }
 console.log("Given String is Paliendrome -----------------> ", isPaliendrome("123321"));
 //! Que.) Average of Array ------------->

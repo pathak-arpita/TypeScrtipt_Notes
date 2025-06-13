@@ -6,10 +6,13 @@ type NameProp = {
 
 function PassingValuesAsProp(nameProp: NameProp) {
     return (
-        <h1>
-            {nameProp.isLoggedIn ? `My name is ${nameProp.name}.
+        <>
+            <p style={{ fontSize: "25px", color: "blue" }}>
+                {nameProp.isLoggedIn ? `My name is ${nameProp.name}.
             I am ${nameProp.age} years old.` : "welcome Guest!"}
-        </h1>
+            </p>
+            <hr />
+        </>
     )
 }
 

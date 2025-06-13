@@ -8,10 +8,13 @@ type PassingObjectAsPropProps = {
 }
 function PassingObjectAsProp({ myInfo }: PassingObjectAsPropProps) {
     return (
-        <h1>
-          This is a {myInfo.name}. And it is a {myInfo.description} project. The version is {myInfo.version} and the author is {myInfo.author}.
-        </h1>
+        <>
+            <p style={{ fontSize: "25px", color: "blue" }}>
+               This {myInfo.name} is a TypeScript-based React application. {myInfo.description}. It is currently at version {myInfo.version} and was developed by {myInfo.author}.
+            </p>
+            <hr />
+        </>
     )
 }
 
-export default PassingObjectAsProp
+export default PassingObjectAsProp;

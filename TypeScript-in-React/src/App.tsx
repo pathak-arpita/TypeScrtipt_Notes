@@ -1,7 +1,9 @@
+import Info from "./Components/Passing_Props/Info"
+
 function App() {
 
   return (
-    <h1>Hiiiiiiii</h1>
+    <Info />
   )
 }
 

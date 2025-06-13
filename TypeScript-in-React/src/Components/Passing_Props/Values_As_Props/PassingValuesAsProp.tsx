@@ -1,24 +1,25 @@
 type NameProp = {
     name: string;
     age: number;
+    isLoggedIn: boolean;
 }
 
-function PassingNameAsProp(nameProp: NameProp) {
+function PassingValuesAsProp(nameProp: NameProp) {
     return (
         <h1>
-            My name is {nameProp.name}.
-            I am {nameProp.age} years old.
+            {nameProp.isLoggedIn ? `My name is ${nameProp.name}.
+            I am ${nameProp.age} years old.` : "welcome Guest!"}
         </h1>
     )
 }
 
-export default PassingNameAsProp;
+export default PassingValuesAsProp;
 
 
 //-------------------------------------------------------------------------------------//
 
 //& OR you can write it like this:
-// function PassingNameAsProp({ name, age }: Props) {
+// function PassingValuesAsProp({ name, age }: Props) {
 //   return (
 //     <div>
 //       <h1>Name: {name}</h1>

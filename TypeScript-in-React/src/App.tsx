@@ -1,9 +1,16 @@
-import Info from "./Components/Passing_Props/Info"
+import InfoInObject from "./Components/Passing_Props/Object_As_Prop/InfoInObject";
+import InfoInValue from "./Components/Passing_Props/Values_As_Props/InfoInValue";
 
 function App() {
 
   return (
-    <Info />
+    <>
+      {/* Passing Props */}
+      <div>
+        <InfoInValue />
+        <InfoInObject />
+      </div>
+    </>
   )
 }
 

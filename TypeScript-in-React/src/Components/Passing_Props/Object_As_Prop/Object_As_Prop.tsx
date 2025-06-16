@@ -1,6 +1,6 @@
 import PassingObjectAsProp from "./PassingObjectAsProp"
 
-function InfoInObject() {
+function Object_As_Prop() {
   const myInfo = {
     name: "Project",
     description: "This is a project to learn TypeScript in React",
@@ -15,4 +15,4 @@ function InfoInObject() {
   )
 }
 
-export default InfoInObject;
+export default Object_As_Prop;

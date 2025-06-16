@@ -1,6 +1,6 @@
 import PassingValuesAsProp from "./PassingValuesAsProp"
 
-function InfoInValue() {
+function Values_As_Props() {
     return (
         <>
             <h2>Passing props as Values :</h2>
@@ -9,4 +9,4 @@ function InfoInValue() {
     )
 }
 
-export default InfoInValue;
+export default Values_As_Props;

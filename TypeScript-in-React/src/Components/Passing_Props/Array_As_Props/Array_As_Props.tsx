@@ -1,6 +1,6 @@
 import PassingArrayAsProp from "./PassingArrayAsProp"
 
-function InfoInArray() {
+function Array_As_Props() {
     const listOfNames = [
         {
             firstName: "John",
@@ -31,4 +31,4 @@ function InfoInArray() {
     )
 }
 
-export default InfoInArray
+export default Array_As_Props
